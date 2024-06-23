@@ -1,0 +1,75 @@
+---
+import Down from '../assets/Down.astro'
+---
+
+<main
+  class="flex justify-center items-center relative md:h-[calc(100%-95px)] h-screen  w-[106%] md:w-auto md:p-0 pl-4"
+>
+  <img
+    src="cactus.webp"
+    alt=""
+    class="md:w-[450px] w-[150px] absolute left-[8%] animate-fade-in-down top-[10%] hidden md:flex"
+  />
+  <img
+    src="tabasco.webp"
+    alt=""
+    class="md:w-[450px] w-[150px] absolute right-[10%] rotate-[10deg] animate-fade-in-down top-[10%] hidden md:flex"
+  />
+  <figure
+    class="absolute bottom-4 w-[40px] text-white animate-bouncing animate-iteration-count-infinite"
+  >
+    <Down />
+  </figure>
+  <div
+    class="flex flex-col justify-center items-center relative animate-fade-in-down md:mt-0 mt-28"
+  >
+    <img src="/hat.webp" alt="" class="md:hidden w-[250px] absolute -top-[130px]"/>
+    <img
+      src="/tears.webp"
+      alt=""
+      draggable="false"
+      class="md:w-[80px] hidden md:flex w-[50px] absolute md:-top-[135px] md:-left-[50px] -rotate-[5deg] -top-[80px] -left-[40px]"
+    />
+    <img
+      src="/tear_reverse.webp"
+      alt=""
+      draggable="false"
+      class="md:w-[80px] hidden md:flex w-[50px] absolute md:-top-[120px] md:-right-[40px] rotate-[30deg] -top-[70px] -right-[40px]"
+    />
+
+    <span class="font-Bernier text-white md:text-[150px] text-[65px] leading-3"
+      >BIENVENIDOS</span
+    >
+    <span class="font-Bernier text-white md:text-[150px] text-[65px]"
+      >CARNALITOS</span
+    >
+    <p
+      class="font-Codec text-white md:text-2xl text-sm mt-4 md:mt-0 font-semibold text-pretty w-[70%] text-center -translate-y-6"
+    >
+      Lo mejor de la comida mexicana en un solo lugar
+    </p>
+    <a
+      href="/CARTA MEROS MEROS.pdf"
+      download="documento.pdf"
+      class="no-underline"
+    >
+      <button
+        class="font-Edmund font-bold md:text-[24px] text-[20px] text-sm md:py-6 p-4 md:px-4 bg-meros-red text-white rounded-md md:mb-10 mb-4 transition-all"
+        id="carta"
+      >
+        DESCARGA NUESTRA CARTA
+      </button>
+    </a>
+    <img
+      src="/moustache.webp"
+      alt=""
+      draggable="false"
+      class="md:w-[250px] w-[100px] -translate-y-0"
+    />
+  </div>
+</main>
+<style>
+  #carta:hover {
+    box-shadow: 8px 6px 0px 2px rgba(0, 0, 0, 0.9);
+  }
+</style>

@@ -1,0 +1,30 @@
+---
+import Love from './Love.astro'
+import Facebook from '../assets/Facebook.astro'
+import Tiktok from '../assets/Tiktok.astro'
+import Instagram from '../assets/Instagram.astro'
+---
+
+<footer
+  class="w-full flex justify-center items-center bg-[#059620] text-white px-10 py-4 flex-col rounded-t-2xl mt-24"
+>
+  <div class="flex justify-between items-center w-full">
+    <div class="flex-grow basis-0">
+      <span class="text-xs"
+        >&copy Copyright 2024 Los Meros Meros Tacos Mexicanos</span
+      >
+    </div>
+    <figure class="w-[180px]">
+      <img src="/logo_meros.png" alt="" class="w-full"/>
+    </figure>
+    <div
+      class="flex justify-end items-center font-Edmund font-bold text-sm gap-10 flex-grow basis-0"
+    >
+      <ul class="flex gap-1 justify-center items-center">
+        <li><Facebook/></li>
+        <li><Instagram/></li>
+        <li><Tiktok/></li>
+      </ul>
+    </div>
+  </div>
+</footer>

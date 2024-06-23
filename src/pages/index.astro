@@ -1,0 +1,54 @@
+---
+import About from '../components/About.astro'
+import { Comment } from '../components/react/Comment'
+import Footer from '../components/Footer.astro'
+import { Header } from '../components/react/Header'
+import Logo from '../components/Logo.astro'
+import Main from '../components/Main.astro'
+import Package from '../components/Package.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Los meros meros tacos mexicanos">
+  <Header client:load />
+  <Main />
+  <section
+    id="about"
+    class="flex justify-center items-center flex-col relative w-[110%] md:w-auto"
+  >
+    <About />
+    <!-- <div>
+      <img src="/banderines.webp" alt="" />
+    </div>
+    <Logo /> -->
+    <div class="flex flex-col justify-center items-center">
+      <h1
+        class="font-Bernier md:text-[110px] text-[70px] md:text-start text-center leading-[70px] md:leading-normal"
+        id="title"
+      >
+        LA PROMOCIÓN DE LA SEMANA
+      </h1>
+      <a
+        href={`https://wa.me/51964189692?text=Quiero%20saber%20más%20sobre%20la%20promoción%20de%20las%20gringas`}
+        target="_blank"
+        class="flex justify-center items-center w-full"
+      >
+        <img src="/GRINGAS.webp" alt="" class="md:w-[580px] shadow-xl w-[350px]" />
+      </a>
+    </div>
+    <Package />
+    <Comment client:load />
+    <Footer />
+  </section>
+</Layout>
+<style>
+  #about {
+    background-image: url('filter.png');
+  }
+
+  #title {
+    color: #ed0505;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 2px #fff;
+  }
+</style>

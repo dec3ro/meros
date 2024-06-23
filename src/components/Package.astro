@@ -1,0 +1,175 @@
+---
+const products = [
+  {
+    title: 'Las carnitas',
+    imagen: 'carnitas.webp',
+    description:
+      'Un plato tradicional de carnitas, servidas con tortillas de maíz, cebolla, cilantro y salsa. Perfecto para los amantes de la carne de cerdo tierna y jugosa.'
+  },
+  {
+    title: 'Tamalitos',
+    imagen: 'tamalitos.webp',
+    description:
+      'Tres tamales acompañados de salsa, crema y un vaso de agua fresca. Ideal para aquellos que disfrutan de los sabores tradicionales del maíz relleno de diversos guisos.'
+  },
+  {
+    title: 'Six tacos de canasta',
+    imagen: 'canasta.webp',
+    description:
+      'Seis tacos de canasta, rellenos de diferentes guisos como chicharrón, papa y frijol, servidos con salsa y una bebida refrescante. Perfectos para un almuerzo rápido y delicioso.'
+  },
+  {
+    title: 'Barbacoa de los meros meros',
+    imagen: 'barbacoa.webp',
+    description:
+      'Un generoso plato de barbacoa de res, acompañada de tortillas, salsa y guacamole. Una opción contundente para los que buscan un sabor auténtico y lleno de tradición.'
+  },
+  {
+    title: "Pa' ti solito",
+    imagen: 'solito.webp',
+    description:
+      'Un plato individual con un taco bien servido, acompañado de totopos, salsas y una bebida. Ideal para una comida rápida y satisfactoria.'
+  },
+  {
+    title: "Pa' que te llenes",
+    imagen: 'llenes.webp',
+    description:
+      'Un banquete de tacos, guisos, tortillas y salsas, acompañado de una bebida. Perfecto para compartir o para aquellos con un gran apetito.'
+  },
+  {
+    title: "Pozole pa' dos",
+    imagen: 'dos.webp',
+    description:
+      'Un rico pozole acompañado de tostadas, crema, rábanos y lechuga, junto con salsas. Una opción ideal para compartir y disfrutar de este plato típico mexicano.'
+  },
+  {
+    title: 'Paquete mixto',
+    imagen: 'mixto.webp',
+    description:
+      'Una selección de tacos variados, incluyendo diferentes carnes y guisos, acompañados de salsas y bebidas. Perfecto para probar un poco de todo y disfrutar de la variedad.'
+  }
+]
+---
+
+<section
+  class="flex justify-center items-center flex-col md:px-12 px-6 w-full pt-12 md:w-[1500px]"
+  id="paquetes"
+>
+  <div class="relative text-[#ED0505] font-Bernier md:text-[100px] text-[80px] md:leading-normal leading-[70px] text-center">
+    <span id="linea">PAQUETES CHINGONES</span>
+  </div>
+  <p
+    class="md:max-w-[600px] md:text-center font-Codec font-bold md:text-pretty text-justify mb-4 text-xl mt-4 md:mt-0 "
+  >
+    ¡Éntrale a nuestros Paquetes Chingones! Pura comida deliciosa, con el sazón
+    auténtico de México. Perfectos para disfrutar con la familia o los compas.
+    ¡No te los pierdas y date un gustazo!
+  </p>
+  <section
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-4 my-8"
+  >
+    {
+      products.map((product) => (
+        <a
+          href={`https://wa.me/51964189692?text=Quiero%20saber%20más%20sobre%20${product.title.toLowerCase()}`}
+          target="_blank"
+        >
+          <div class="relative mb-5">
+            <figure class="rounded-md w-full overflow-hidden h-[270px]">
+              <img
+                src={product.imagen}
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="flex justify-center items-center">
+              <span
+                class="absolute -top-5 font-Hitchcut text-center px-2 max-w-[80%] text-white rounded text-2xl uppercase"
+                id="border"
+              >
+                {product.title}
+              </span>
+            </div>
+            <p class="font-Codec font-bold text py-4 text-pretty">
+              {product.description}
+            </p>
+          </div>
+        </a>
+      ))
+    }
+  </section>
+
+  <a
+    href="https://wa.me/51964189692?text=Hola,%20vengo%20de%20la%20pagina%20web,%20quiero%20saber%20más%20sobre%20las%20promociones"
+    target="_blank"
+  >
+    <button
+      class="font-Codec font-bold text-[24px] py-2 px-4 bg-[#529124] text-white rounded-md mb-10 transition-all"
+      id="carta"
+      >MAS INFORMACION
+    </button>
+  </a>
+
+  <style>
+    #carta:hover {
+      box-shadow: 8px 6px 0px 2px rgba(0, 0, 0, 0.9);
+    }
+
+    #linea {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      -webkit-text-stroke: 2px #fff;
+    }
+
+    #border {
+      text-shadow:
+        6px 6px 0 #059620,
+        -6px 6px 0 #059620,
+        6px -6px 0 #059620,
+        -6px -6px 0 #059620,
+        6px 0px 0 #059620,
+        0px 6px 0 #059620,
+        -6px 0px 0 #059620,
+        0px -6px 0 #059620,
+        5px 5px 0 #059620,
+        -5px 5px 0 #059620,
+        5px -5px 0 #059620,
+        -5px -5px 0 #059620,
+        5px 0px 0 #059620,
+        0px 5px 0 #059620,
+        -5px 0px 0 #059620,
+        0px -5px 0 #059620,
+        4px 4px 0 #059620,
+        -4px 4px 0 #059620,
+        4px -4px 0 #059620,
+        -4px -4px 0 #059620,
+        4px 0px 0 #059620,
+        0px 4px 0 #059620,
+        -4px 0px 0 #059620,
+        0px -4px 0 #059620,
+        3px 3px 0 #059620,
+        -3px 3px 0 #059620,
+        3px -3px 0 #059620,
+        -3px -3px 0 #059620,
+        3px 0px 0 #059620,
+        0px 3px 0 #059620,
+        -3px 0px 0 #059620,
+        0px -3px 0 #059620,
+        2px 2px 0 #059620,
+        -2px 2px 0 #059620,
+        2px -2px 0 #059620,
+        -2px -2px 0 #059620,
+        2px 0px 0 #059620,
+        0px 2px 0 #059620,
+        -2px 0px 0 #059620,
+        0px -2px 0 #059620,
+        1px 1px 0 #059620,
+        -1px 1px 0 #059620,
+        1px -1px 0 #059620,
+        -1px -1px 0 #059620,
+        1px 0px 0 #059620,
+        0px 1px 0 #059620,
+        -1px 0px 0 #059620,
+        0px -1px 0 #059620;
+    }
+  </style>
+</section>
